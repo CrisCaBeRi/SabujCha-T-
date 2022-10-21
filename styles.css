@@ -55,7 +55,7 @@ select {
 /*____Imagen inicio____*/
 /*Para esta sección se agrega la imagen como background, se le da un ajuste con cover y un alto predeterminado con height, la propiedad no repead unifica la imagen. Para el contenido en texto se agrega el tamaño en específico con su fuente correspondiente, lo mismo se hace con a*/
 .imagen_inicio {
-    background-image: url(/Imagenes/slider-2.jpg);
+    background-image: url(./Imagenes/slider-2.jpg);
     background-size: cover;
     height: 500px;
     background-repeat: no-repeat; 
@@ -89,13 +89,13 @@ select {
     height: 250px;}
 
 .sale_img:nth-child(1)  {
-    background-image: url(/Imagenes/banner-1.png);
+    background-image: url(./Imagenes/banner-1.png);
     background-size: 100% 100% ;
     background-repeat: no-repeat;
     margin-right: 30px;} 
 
 .sale_img:nth-child(2)  {
-    background-image: url(/Imagenes/banner-2.png);
+    background-image: url(./Imagenes/banner-2.png);
     background-size: 100% 100% ;
     background-repeat: no-repeat;} 
 
@@ -115,7 +115,7 @@ select {
 .latest {
     padding-top: 70px;
     padding-bottom: 70px;
-    background-image: url(/Imagenes/bg-1.jpg);}
+    background-image: url(./Imagenes/bg-1.jpg);}
 
 .texto_latest {    
     text-align: center;
@@ -231,7 +231,7 @@ p span {
 .join {
     padding: 100px 0px 100px 0px;
     text-align: center; 
-    background-image: url(/Imagenes/bg-2.jpg);}
+    background-image: url(./Imagenes/bg-2.jpg);}
 
 .formulario {
     display: flex;    
@@ -257,7 +257,7 @@ p span {
 .latest_news {  
     padding: 50px 0px 50px 0px;
     text-align: center;
-    background-image: url(/Imagenes/bg-1.jpg);}
+    background-image: url(./Imagenes/bg-1.jpg);}
 
 .latest_news h2 {
     margin-bottom: -15px;}
