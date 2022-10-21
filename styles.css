@@ -17,6 +17,9 @@ html {
     margin-left: 45px;    
     padding: 0%;}
 
+.hamburguesa {
+    display: none;}
+
 /*__HEADER__*/
 header {
     display: flex;
@@ -322,33 +325,98 @@ footer h2 {
     text-decoration: none;
     font-weight: 700;}
 
-
-
-
-
-
-
-
-
  @media (max-width : 640px) {
     html {
         margin-right: 5px;
-        margin-left: 5px;    
-    }
+        margin-left: 5px;}
     
     body h2 {
-        font-size: 40px;
-    }
+        font-size: 40px;}
 
+    .nav_container {    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;}
+    
+    .nav_item {
+        color: white;
+        text-decoration: none;}
+    
+    /*Dentro del media */
+    .nav_label {
+        display: block;
+        cursor: pointer;}
+
+    .nav_menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0px;
+        background-color: #529F0F;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: 1s;}
+    /*pseudolase checked > referencia al input checkbox de html que está encima de nav_menu, a su vez esta trayendo el label for=menu que actuara como cuadro de selección mediante la imagen svg de la hamburguesa  el + es selector de hermano adyacente, solo opera con etiquetas que están seguidas*/
+    
+    .nav_input {display: none;}
+    
+    .nav_input:checked + .nav_menu{
+        clip-path: circle(100% at center);}
+
+    /*__HEADER__*/
+
+    header {
+        display: none;}
+
+   .hamburguesa {
+        display: flex;
+        justify-content: space-between;}
+
+    .nav_container .imagen_header img { 
+        margin-right: 100px;}
+    .nav_container .nav_label img {
+        padding-left: 70px;}
+
+    .nav_item {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;}
+    
+    /*Dentro del media */
+    .nav_label {
+        float: right;       
+        cursor: pointer;}
+
+    .nav_menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0px;
+        background-color: #529F0F;        
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: 1s;}
+    /*pseudolase checked > referencia al input checkbox de html que está encima de nav_menu, a su vez esta trayendo el label for=menu que actuara como cuadro de selección mediante la imagen svg de la hamburguesa  el + es selector de hermano adyacente, solo opera con etiquetas que están seguidas*/
+    
+    .nav_input {display: none;}
+    
+    .nav_input:checked + .nav_menu{
+        clip-path: circle(100% at center);}
 
     /*____Imagen inicio____*/
     .imagen_inicio {       
         height: 400px;        
-        background-position: 50%;  
-    }
+        background-position: 50%;}
+
     .imagen_inicio h1 {
-        font-size:30px;    
-    }
+        font-size:30px;}
 
     /*_____SALE________*/
     .sale{
@@ -383,24 +451,21 @@ footer h2 {
     .latest_all_img {
         display: flex;         
         flex-direction: column;
-        margin-left: 40px;       
-    }    
+        margin-left: 40px;}    
 
     .latest_all_img p {
-        margin-bottom: 40px;        
-    }
+        margin-bottom: 40px;}
 
     /*__SECCION OPINIONS__*/
     .opinions {
-        margin: 50px 0 50px 0;
-    }
+        margin: 50px 0 50px 0;}
+
     .legend {
         width: 350px;}
 
     /*__NEW PRODUCTS__*/
     .new_products {
-        padding: 50px 0 70px 0;
-    }
+        padding: 50px 0 70px 0;}
 
     .new_products h2:nth-child(1) {
         font-size: 30px;}
@@ -442,100 +507,45 @@ footer h2 {
         text-decoration: none;
         font-size: 25px;
         margin-bottom: 10px;}
-
     
-        .latest_n {
-            margin-bottom: 20px;
-            margin-left: 40px;
-        }
+    .latest_n {
+        margin-bottom: 20px;
+        margin-left: 40px;}
 
-        .latest_n img {
+    .latest_n img {
+        width: 90%;}
 
-            width: 380px;
-        }
-
-    
     .news_img {
         display: flex;        
         flex-direction: column;        
-        margin: 0px 0px 0px 0px;
-        text-align: left;}
+        margin: 0px;}
 
-    .latest_n h3{ 
-        font-family: 'Work Sans', sans-serif;
-        margin: 15px 0 5px 0;
-        font-size: 15px;
-        font-style: italic;
-        text-decoration: underline;
-        color: #529f29;}
+    /*__Patrocinadores__*/
 
-    .latest_n p {
-        color: #575757;
-        margin-bottom: 30px;
-        *padding: 0px 50px 0 0;}
+    .patrocinadores img:nth-child(2), img:nth-child(3), img:nth-child(4), img:nth-child(5){
+        display: none;}
 
-    
-
-    
-    
-
-
-    
-
-
-    
-
-    
-
-    
-
-
-
-    
-
-
-
-    
-    
-
-
-    
-   
-
+    .patrocinadores img {        
+        margin: 0px;}  
         
-    
+    /*___FOOTER__*/
 
+    footer {
+        Background-color: #f3f3f3;}
 
+    footer h2 {
+        font-size: 20px;}
 
+    .listas {
+        padding: 0px;        
+        flex-direction: column;        
+        margin: 40px;}
 
-   
+    .copy {
+        display: flex;
+        flex-direction: column;       
+        padding: 0px;}
 
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+    .copy img {
+        width: 70%;}
+} 
