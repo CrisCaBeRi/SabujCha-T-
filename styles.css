@@ -42,7 +42,8 @@ header {
     padding: 0px;
     display: flex;
     flex-direction: row;    
-    list-style: none;}
+    list-style: none;
+    cursor: pointer;}
 /*Se espacias los elementos de la lista con margin*/
 .lista_menu li{
     margin-right: 50px;}
