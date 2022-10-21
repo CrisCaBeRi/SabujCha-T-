@@ -5,6 +5,8 @@
     font-family: 'Work Sans', sans-serif;
     src: url(https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Work+Sans&display=swap);}
 
+ 
+
 /*se de un formato general al documento de los tamaños de letra y las mergenes de izquierda y derecha*/
 body h2 {
     font-size: 40px;
@@ -111,7 +113,7 @@ select {
     padding: 0px 0px 0px 40px;
     font-weight: 600;}
 
-/*___SECCIÓN LATEST__*/
+/*___SECCIÓN LATEST PRODUCTS__*/
 /*Para latest también se coloca el fondo por medio de background y se da un espaciado de arriba y abajo con padding. Para el texto, se coloca en la posición central con un margen abajo de 50px. En el caso de los textos, para la clase texto_latest , se hace una modificación al h2 usando :nth ya que conserva la mimsa letra del subtitulo pero tiene que ser más pequeña. Para la clase padre se hacen modificaciones mediante flexbox para guardar su posición. */
 .latest {
     padding-top: 70px;
@@ -126,11 +128,15 @@ select {
     font-size: 20px;}
 
 .latest_all_img {
-    display: flex;     
-    justify-content: center;}
+    display: flex;
+    margin: 0 110px; 
+    justify-content: space-between;}
+
+.latest_img {
+    margin-right: 25px;}
 
 .latest_img img {
-    width: 90%;}
+    width: 100%;}
 /*Esta clase se modifica para crear la etiqueta de descuento con un tamaño definido por height y weight, una forma ciruclar por border los espaciados totales del contenedor con margin y tamaño correspondiente. Adicionalemnte se modifica el h4 que va dentro del circulo dando un margin para posicionar el % de descuento en la mitad*/
 .circulo {
     width: 50px;
@@ -256,15 +262,16 @@ p span {
 /*__LATEST_NEWS__*/
 /*En esta sección se crea un espaciado de 50 px arriba y abajo. Se posiciona el fondo y al igual que en las anteriores clases, se modifican los contenedore para que los tres contenidos queden bien distribuidos mediante flexbox*/
 .latest_news {  
-    padding: 50px 0px 50px 0px;
-    text-align: center;
+    padding: 50px 0px 50px 0px;   
     background-image: url(./Imagenes/bg-1.jpg);}
 
 .latest_news h2 {
+    text-align: center;
     margin-bottom: -15px;}
 
-hr {width: 15%;
-margin-bottom: 50px;}
+hr {
+    width: 15%;
+    margin-bottom: 50px;}
 
 .news_img h2 {
     text-decoration: none;
@@ -273,9 +280,17 @@ margin-bottom: 50px;}
 
 .news_img {
     display: flex;
-    justify-content: space-between;   
-    margin: 0 140px 0 140px;
+    justify-content: space-between; 
+    margin: 0 140px 0 140px;}
+
+.latest_n h3, .latest_n h2, .latest_n p {
     text-align: left;}
+
+.latest_n {    
+    width: 32%;}
+
+.latest_n img {
+    width: 100%;}
 
 .latest_n h3{ 
     font-family: 'Work Sans', sans-serif;
@@ -287,8 +302,7 @@ margin-bottom: 50px;}
 
 .latest_n p {
     color: #575757;
-    margin-bottom: 30px;
-    padding: 0px 50px 0 0;}
+    margin-bottom: 30px;}
 
 .latest_n a {
     color: #575757;
@@ -299,12 +313,16 @@ margin-bottom: 50px;}
 /*__Patrocinadores__*/
 /*Se edita el espaciado de imagenes por medio de margin, la posición por flexbox y el interlineado de imagenes directamente en la etiqueta img*/
 .patrocinadores {
-    margin: 50px 0 50px 0;
+    padding: 50px 0 50px 0;}
+
+.img_patrocinio {
+    margin: 0px 50px 0 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;}
 
 .patrocinadores img {
+    width: calc(60%/5);
     margin: 40px;}
 
 /*___FOOTER__*/
@@ -450,7 +468,8 @@ footer h2 {
         margin-bottom: 30px;} 
 
 
-    /*___SECCIÓN LATEST__*/
+    /*___SECCIÓN LATEST PRODUCTS__*/ 
+
     .latest {
         padding-top: 40px;
         padding-bottom: 40px;}
@@ -464,10 +483,14 @@ footer h2 {
     .texto_latest h2:nth-child(2){
         font-size: 15px;}
 
+    .latest_img {
+        margin-right: 0px;}
+
     .latest_all_img {
         display: flex;         
         flex-direction: column;
-        margin-left: 40px;}    
+        margin: 0px 40px 0px 40px;
+        *margin-left: 40px;}    
 
     .latest_all_img p {
         margin-bottom: 40px;}
@@ -508,9 +531,16 @@ footer h2 {
     .formulario input {       
         width: 45%;}
 
-    /*__LATEST_NEWS__*/
+    /*__LATEST_NEWS__*/      
+    .latest_n {
+        width: 90%;
+        margin: 0px 40px 20px 40px;}
+    
+    .latest_n img {
+        width: 90%;}       
+
     .latest_news {  
-        padding: 50px 0px 50px 0px;}        
+        padding: 40px 0px 40px 0px;}        
 
     .latest_news h2 {
         font-size:30px ;
@@ -519,32 +549,29 @@ footer h2 {
     hr {
         width: 38%;}
 
-    .news_img h2 {
-        text-decoration: none;
-        font-size: 25px;
-        margin-bottom: 10px;}
-    
-    .latest_n {
-        margin-bottom: 20px;
-        margin-left: 40px;}
-
-    .latest_n img {
-        width: 90%;}
-
     .news_img {
         display: flex;        
         flex-direction: column;        
         margin: 0px;}
 
+    .news_img h2 {
+        text-decoration: none;
+        font-size: 25px;
+        margin-bottom: 10px;}
+
+    .news_img p {padding-right: 25px;}
+    
     /*__Patrocinadores__*/
     .patrocinadores img:nth-child(2), img:nth-child(3), img:nth-child(4), img:nth-child(5){
         display: none;}
 
-    .patrocinadores img {        
+    .patrocinadores img { 
+        width: 60%;       
         margin: 0px;}  
         
     /*___FOOTER__*/
     footer {
+        padding-top: 40px;
         Background-color: #f3f3f3;}
 
     footer h2 {
