@@ -1,9 +1,11 @@
+/*Se importan las fuentes*/
 @font-face{
     font-family: 'Playfair Display', serif;
     font-family: 'Lora', serif;
     font-family: 'Work Sans', sans-serif;
     src: url(https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Work+Sans&display=swap);}
 
+/*se de un formato general al documento de los tamaños de letra y las mergenes de izquierda y derecha*/
 body h2 {
     font-size: 40px;
     font-family: 'Lora', serif;
@@ -16,20 +18,22 @@ html {
     margin-right: 45px;
     margin-left: 45px;    
     padding: 0%;}
-
+/*Se oculta el menú de hamburguesa para ser usado después*/
 .hamburguesa {
     display: none;}
 
 /*__HEADER__*/
+/*Se utiliza flexbox para los elementos, en el header se genera un espacio entre elementos y un orden horizontal row, ya que las listas naturalmente se despliegan hacia abajo*/
 header {
     display: flex;
     justify-content: space-between;    
     flex-direction: row; 
     align-items: center;}
 
+/*Se da un tamaño al logo */
 .imagen_header{  
     width: 40%;}
-
+/*Se agregan las fuentes directamente al menú, se da posición exacta con la maqueta usando row y se le quitan los puntos de la lista con list style*/
  .lista_menu{ 
     font-family: 'Work Sans', sans-serif;
     font-size: 14px;
@@ -39,16 +43,17 @@ header {
     display: flex;
     flex-direction: row;    
     list-style: none;}
-
+/*Se espacias los elementos de la lista con margin*/
 .lista_menu li{
     margin-right: 50px;}
-
+/*Se altera la parte visual de la etiqueta select del menú quitándole el borde y dando la fuente en específico*/
 select {
     border: none;
     font-family: 'Work Sans', sans-serif;    
     font-weight: 600;}
 
 /*____Imagen inicio____*/
+/*Para esta sección se agrega la imagen como background, se le da un ajuste con cover y un alto predeterminado con height, la propiedad no repead unifica la imagen. Para el contenido en texto se agrega el tamaño en específico con su fuente correspondiente, lo mismo se hace con a*/
 .imagen_inicio {
     background-image: url(/Imagenes/slider-2.jpg);
     background-size: cover;
@@ -71,6 +76,7 @@ select {
     font-weight: 600;}
 
 /*_____SALE________*/
+/*Para esta sección se da un espaciado entre arriba y bajo de todo el contenido con un padding, luego se agrega posición con flexbox. Para el conenedor de imagenes se da un tamaño preestablecido para que todas sean iguales, luego para cada contenedor se agrega su imagen correspondiente utilizando la misma clase pero con :nth. Finalmente se ajusta el tamaño y color de la letra */
 .sale{
     margin-top: 100px;
     margin-bottom: 100px;
@@ -105,6 +111,7 @@ select {
     font-weight: 600;}
 
 /*___SECCIÓN LATEST__*/
+/*Para latest también se coloca el fondo por medio de background y se da un espaciado de arriba y abajo con padding. Para el texto, se coloca en la posición central con un margen abajo de 50px. En el caso de los textos, para la clase texto_latest , se hace una modificación al h2 usando :nth ya que conserva la mimsa letra del subtitulo pero tiene que ser más pequeña. Para la clase padre se hacen modificaciones mediante flexbox para guardar su posición. */
 .latest {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -123,7 +130,7 @@ select {
 
 .latest_img img {
     width: 90%;}
-
+/*Esta clase se modifica para crear la etiqueta de descuento con un tamaño definido por height y weight, una forma ciruclar por border los espaciados totales del contenedor con margin y tamaño correspondiente. Adicionalemnte se modifica el h4 que va dentro del circulo dando un margin para posicionar el % de descuento en la mitad*/
 .circulo {
     width: 50px;
     height: 50px;
@@ -150,6 +157,7 @@ select {
     font-weight: 600;}
 
 /*__SECCION OPINIONS__*/
+/*Se modifica los espaciados de arriba - abajo y su posición central con justify content. Para las demas clases se hacen modificaciones de texto simples como tamaños o tipografías*/
 .opinions {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -176,6 +184,7 @@ select {
     font-size:15px;}
 
 /*__NEW PRODUCTS__*/
+/*Para esta sección se hace un espaciado arriba y abajo con padding, se centra el texto. En general se utilizan las mismas propiedades de la sección Latest, unicamente se modifican los tamaños para que el contenedor padre ubique los ocho contenidos en dos filas */
 .new_products {
     padding-top: 50px;     
     padding-bottom: 50px;
@@ -218,6 +227,7 @@ p span {
     flex-wrap: wrap; /*organizar contenido harizontalmente abajo cuando se completa el 100% de contenido en la linea superior */}
 
 /*__JOIN__*/
+/*En esta clase se genera un espaciado superior e inferior de 100px y se agrega la imagen de fondo. Para el formulario y el boton, se altera el tamaño por width y el fondo se pone transparente, para el boton se pone negro*/
 .join {
     padding: 100px 0px 100px 0px;
     text-align: center; 
@@ -243,6 +253,7 @@ p span {
     width: 150px;}
 
 /*__LATEST_NEWS__*/
+/*En esta sección se crea un espaciado de 50 px arriba y abajo. Se posiciona el fondo y al igual que en las anteriores clases, se modifican los contenedore para que los tres contenidos queden bien distribuidos mediante flexbox*/
 .latest_news {  
     padding: 50px 0px 50px 0px;
     text-align: center;
@@ -285,6 +296,7 @@ margin-bottom: 50px;}
     font-family: 'Work Sans', sans-serif;}
 
 /*__Patrocinadores__*/
+/*Se edita el espaciado de imagenes por medio de margin, la posición por flexbox y el interlineado de imagenes directamente en la etiqueta img*/
 .patrocinadores {
     margin: 50px 0 50px 0;
     display: flex;
@@ -295,6 +307,7 @@ margin-bottom: 50px;}
     margin: 40px;}
 
 /*___FOOTER__*/
+/*Para el footer, se crea un background color no tan blanco ya que contrasta con el banco del fondo de página. Se modifican los tamaños de letra correspondientes. Para la clase . listas, se hacen modificaciones utilizando flexbox para que se ubiquen una al lado de otra con un espaciado especifico definido por el margin. En .copy se vuelve a utilizar flexbox para separar los elementos(iamgen y texto) uno del otro y se ajustan con padding*/
 footer {
     Background-color: #f3f3f3;}
 
@@ -325,6 +338,8 @@ footer h2 {
     text-decoration: none;
     font-weight: 700;}
 
+
+/*En este apartado se encuentran las modificaciones correspondientes en tamaño y ubicacion para la vista mobile. De forma general se utiliza un flex direction column para albergar los elementos y que no se sobredimensionen utilizando también margin y padding para cada clase. */
  @media (max-width : 640px) {
     html {
         margin-right: 5px;
@@ -368,9 +383,9 @@ footer h2 {
         clip-path: circle(100% at center);}
 
     /*__HEADER__*/
-
+    /*Se esconde el menu de la versión desktop*/
     header {
-        display: none;}
+        display: none;} 
 
    .hamburguesa {
         display: flex;
@@ -521,7 +536,6 @@ footer h2 {
         margin: 0px;}
 
     /*__Patrocinadores__*/
-
     .patrocinadores img:nth-child(2), img:nth-child(3), img:nth-child(4), img:nth-child(5){
         display: none;}
 
@@ -529,7 +543,6 @@ footer h2 {
         margin: 0px;}  
         
     /*___FOOTER__*/
-
     footer {
         Background-color: #f3f3f3;}
 

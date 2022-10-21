@@ -1,19 +1,25 @@
+
+<!-- Creación del formato html-->
 <!DOCTYPE html>
-<html lang="en">
+<!-- Selección de lenguaje en español-->
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Definición de titulo-->
     <title>SabujCha</title>
+    <!-- link a las páginas de estilos, fuentes de imagenes y vinculo de fonttype-->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Work+Sans&display=swap');
     </style>
 </head>
-
+<!-- Creación del body-->
 <body>   
-    <!--  Hamburguesa --> 
+    <!--  Se crea la Hamburguesa que después es usada con mediaqwery| se crea un contenedor general para el nav en donde se alamacenan los mismos contenidos del menú versión desktop pero se agrega un label, input y un contenedor de navegación nav_menú--> 
+    
     <nav class="hamburguesa">
         <div class="nav_container">
 
@@ -44,7 +50,7 @@
             </div>
         </div>
     </nav>
-    
+    <!--Se crea la sección header que alacena la parte del menú| se hace por medio de una lista, luego se adjunta la imagen del logo y el selector de moneda--> 
 
     <header>        
         <ul class="lista_menu">
@@ -66,12 +72,12 @@
             <i class="fa-solid fa-cart-shopping"></i>
         </div> 
     </header>
-
+    <!--  Se crea la sección de la imagen principal que alberga el h1 y el hipervinculo por medio de un a. La imagen se agrega como background en CSS--> 
     <section class="imagen_inicio">
         <h1>Want to stay healthy <br>drink matcha.</h1>
         <a href="">Shop now</a>        
     </section>
-
+    <!--  Se crea la sección sale que alberga dos contenedores que van a tener las imagenes de descuento y los textos. Las imagenes se agregan como background en CSS--> 
     <section class="sale">
         <div class="sale_img">
             <h2>-50% Sale</h2>
@@ -82,7 +88,7 @@
             <p>WINTER VACATION</p>
         </div>
     </section>
-
+    <!--  Se crea la sección latest que alberga 6 contenedores. El primero, únicamente para los titulos principales. El segundo se crea como clase padre para los otros contenedores. los otros 4, contienen las imagenes de los productos con su texto correspondiente--> 
     <section class="latest">
         <div class="texto_latest">
             <h2>Latest Products</h2>
@@ -119,6 +125,7 @@
             </div>
         </div>
     </section>
+    <!--  Se crea la sección opinions con uncontenedor que alberga imagen y texto correspondiente--> 
 
     <section class="opinions">
         <div class="legend">
@@ -128,7 +135,7 @@
             <p>Customer</p>
         </div>
     </section>
-
+    <!--  Se crea la sección new products que alberga los subtitulos correspondientes y al igual que en la sección latest, se crea un contenedor padre que alberga los demas contenedores de los productos. Adicionalmente, se crea un contenedor llamado circulo que va a hacer las funciones de etiqueta de descuento --> 
     <section class="new_products">
         <h2>New Products</h2>
         <h2>Lorem ipsum dolor sit amet consecteturadipisicing elit <br> Dolores nulla maxime officiis aliquid </h2>
@@ -190,7 +197,7 @@
             </div>
         </div>
     </section>
-
+    <!--  Se crea la sección join que contien un subtitulo y un contendor que agrega una input que recoge información en texto y un botón de envio--> 
     <section class="join">
         <h2>Join to our Newsletter</h2>
             <div class="formulario">                
@@ -198,7 +205,7 @@
                 <button>SUBSCRIBE </button>        
             </div>
     </section>
-
+    <!--  Se crea la sección latest news que contiene los subtitulos en h2. También alberga 4 contenedores, el primero funciona como padre de los contenedroes que poseen la información del producto: img, p, h3 y h2 --> 
     <section class="latest_news">
         <h2>Latest News</h2> 
         <hr>     
@@ -227,7 +234,7 @@
             </div>
         </div>
     </section>
-
+    <!--  Se crea la sección patrocinadores que alberga 5 imagenes directamente--> 
     <section class="patrocinadores">
         <img src="/Imagenes/1.jpg" alt="img patrocinadores 1">
         <img src="/Imagenes/2.jpg" alt="img patrocinadores 2">
@@ -235,7 +242,7 @@
         <img src="/Imagenes/4.jpg" alt="img patrocinadores 4">
         <img src="/Imagenes/5.jpg" alt="img patrocinadores 5">
     </section>
-
+    <!--  Se crea la sección del footer que alberga una clase padre directa para los elementos de listas que también se encuentran en contenedores separados. De último se encuentra un contenedor copy, que alberga el texto párrafo y la imagen correspondientes--> 
     <footer>
         <div class="listas">
             <div class="account">
@@ -287,6 +294,5 @@
             <img src="/Imagenes/payment.png" alt="imagen_pago" width="20%" height="20px">
         </div>
     </footer>
-
 </body>
 </html>
